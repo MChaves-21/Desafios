@@ -1,12 +1,20 @@
 'use client'
 import { useState } from 'react'
-import GeradorNumeros from '../../lib/gerador' // importa a classe
+import GeradorNumeros from '../../lib/gerador'
 import styles from './page.module.css'
+
+type Analise = {
+  media: number
+  maior: number
+  menor: number
+  pares: number
+  impares: number
+}
 
 export default function Home() {
   const [quantidade, setQuantidade] = useState(0)
   const [numeros, setNumeros] = useState<number[]>([])
-  const [analise, setAnalise] = useState<any>({})
+  const [analise, setAnalise] = useState<Analise | null>(null)
 
   function handleClick() {
     try {
@@ -15,8 +23,12 @@ export default function Home() {
 
       setNumeros(gerador.numeros)
       setAnalise(gerador.analisar())
-    } catch (error: any) {
-      alert(error.message)
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(error.message)
+      } else {
+        alert('Erro desconhecido')
+      }
     }
   }
 
@@ -31,26 +43,32 @@ export default function Home() {
         className={styles.input}
         onChange={(e) => setQuantidade(Number(e.target.value))}
       />
-    
-      <button onClick={handleClick} className={styles.butom}>Gerar e Analisar</button>
+
+      <button onClick={handleClick} className={styles.butom}>
+        Gerar e Analisar
+      </button>
 
       {numeros.length > 0 && (
         <div>
           <h2 className={styles.geradosTitulo}>Números gerados:</h2>
+          <ul className={styles.lista}>
+            {numeros.map((num, i) => (
+              <li key={i} className={styles.item}>{num}</li>
+            ))}
+          </ul>
 
-<ul className={styles.lista}>
-  {numeros.map((num, i) => (<li key={i} className={styles.item}>{num}</li>))}
-</ul>
-
-<section className={styles.resultado}>Análise dos resultados</section>
-
-<ul className={styles.lista}>
-  <li className={styles.item}>Média: {analise.media}</li>
-  <li className={styles.item}>Maior: {analise.maior}</li>
-  <li className={styles.item}>Menor: {analise.menor}</li>
-  <li className={styles.item}>Pares: {analise.pares}</li>
-  <li className={styles.item}>Ímpares: {analise.impares}</li>
-</ul>
+          {analise && (
+            <>
+              <section className={styles.resultado}>Análise dos resultados</section>
+              <ul className={styles.lista}>
+                <li className={styles.item}>Média: {analise.media}</li>
+                <li className={styles.item}>Maior: {analise.maior}</li>
+                <li className={styles.item}>Menor: {analise.menor}</li>
+                <li className={styles.item}>Pares: {analise.pares}</li>
+                <li className={styles.item}>Ímpares: {analise.impares}</li>
+              </ul>
+            </>
+          )}
         </div>
       )}
     </div>
