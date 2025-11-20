@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- CONFIGURAÇÃO DO BODY (FUNDO) --- */
+
+/* Estado Inicial / Empate: Cor Neutra (Cinza Concreto) */
+body {
+    background: #dcdde1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.8s ease;
+}
+
+/* Vencedor: Light Mode (Gradiente Roxo destaque) */
+body.tema-claro {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Vencedor: Dark Mode (Escuro) */
+body.tema-escuro {
+    background: #1e1e2e;
+}
+
+/* --- CARTÃO PRINCIPAL (Tamanho Aumentado) --- */
+.card {
+    background: white;
+    padding: 3rem;
+    /* Rebalanceado para 3rem (era 3.5) */
+    border-radius: 25px;
+    width: 660px;
+    /* Mantido o tamanho grande de 660px */
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Título: Forte e claro */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    /* Aumentado para 2.5rem */
+}
+
+/* Subtítulo: Abaixo do Título */
+p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    /* Harmonizado para 1.6rem */
+}
+
+/* --- PLACAR --- */
+.placar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Rótulo base */
+.label {
+    font-size: 1.2rem;
+    /* Aumentado para 1.2rem */
+}
+
+/* Contagem de Votos: O maior elemento de todos */
+.votos {
+    font-size: 3.5rem;
+    /* Aumentado para 3.5rem */
+    display: block;
+    margin-top: 5px;
+}
+
+#votos-dark {
+    color: #2d3436;
+}
+
+#votos-light {
+    color: #f39c12;
+}
+
+/* --- BARRA DE PROGRESSO --- */
+.barra-fundo {
+    width: 100%;
+    height: 18px;
+    background-color: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.barra-frente {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, #2d3436 0%, #636e72 100%);
+    transition: width 0.4s ease;
+}
+
+/* --- BOTÕES --- */
+.acoes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* Harmonizado com o .label */
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-dark {
+    background-color: #2d3436;
+    color: white;
+}
+
+.btn-light {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Total de Votos: Nível intermediário */
+.total {
+    font-size: 1.8rem;
+    /* Harmonizado para 1.8rem */
+    color: #aaa;
+    margin-top: 15px;
+}

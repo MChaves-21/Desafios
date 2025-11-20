@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação Dark vs Light</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>Dark vs Light</h2>
+            <p>O vencedor define a cor do fundo!</p>
+
+            <div class="placar">
+                <div class="time">
+                    <span class="label">Dark Mode</span>
+                    <span class="votos" id="votos-dark">0</span>
+                </div>
+                <div class="time">
+                    <span class="label">Light Mode</span>
+                    <span class="votos" id="votos-light">0</span>
+                </div>
+            </div>
+
+            <div class="barra-fundo">
+                <div id="barra-progresso" class="barra-frente"></div>
+            </div>
+
+            <div class="acoes">
+                <button class="btn btn-dark" onclick="votar('Dark')">Votar Dark 🌙</button>
+                <button class="btn btn-light" onclick="votar('Light')">Votar Light ☀️</button>
+            </div>
+
+            <p class="total">Total de votos: <span id="total">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
