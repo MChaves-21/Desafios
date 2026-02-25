@@ -1,0 +1,1 @@
+Este repositório é o meu "laboratório" pessoal. Aqui centralizo a resolução de desafios de lógica, projetos de faculdade e testes técnicos realizados para processos seletivos. O objetivo é documentar minha evolução e manter um histórico de soluções práticas.
