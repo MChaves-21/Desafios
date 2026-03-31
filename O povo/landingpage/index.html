@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie (2023) - Playcube</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <div class="logo-box"></div>
+                <div class="logo-inner"></div>
+                <span class="logo-text">PLAYCUBE</span>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Séries</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="movie-specs container">
+            <div class="movie-poster">
+                <img src="materiais/imgs/capa.png" alt="Pôster do filme Barbie">
+            </div>
+
+            <div class="movie-details">
+                <h1 class="movie-title">Barbie <span class="movie-year">(2023)</span></h1>
+
+                <div class="spec-item">
+                    <strong class="font-bold-24">Gênero:</strong>
+                    <p class="font-reg-24">Comédia, Aventura, Fantasia</p>
+                </div>
+
+                <div class="spec-item">
+                    <strong class="font-bold-24">Sinopse:</strong>
+                    <p class="font-reg-24">No mundo mágico das Barbies, "Barbieland", uma das bonecas começa a perceber
+                        que não se encaixa como as outras. Depois de ser expulsa, ela parte para uma aventura no "mundo
+                        real", onde descobre que a beleza está no interior de cada um.</p>
+                </div>
+
+                <div class="specs-grid">
+                    <div class="spec-item"><strong class="font-bold-24">Dirigido por:</strong>
+                        <p class="font-reg-24">Greta Gerwig</p>
+                    </div>
+                    <div class="spec-item"><strong class="font-bold-24">Escrito por:</strong>
+                        <p class="font-reg-24">Greta Gerwig, Noah Baumbach</p>
+                    </div>
+                    <div class="spec-item"><strong class="font-bold-24">Situação:</strong>
+                        <p class="font-reg-24">Lançada</p>
+                    </div>
+                    <div class="spec-item"><strong class="font-bold-24">Idioma original:</strong>
+                        <p class="font-reg-24">Inglês</p>
+                    </div>
+                    <div class="spec-item"><strong class="font-bold-24">Orçamento:</strong>
+                        <p class="font-reg-24">$145,000,000.00</p>
+                    </div>
+                    <div class="spec-item"><strong class="font-bold-24">Receita:</strong>
+                        <p class="font-reg-24">$1,280,313,193.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cast-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="font-bold-36">Elenco</h2>
+                    <a href="#" class="btn-primary">Ver mais</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">&lt;</button>
+                    <div class="cast-scroll" id="castScroll">
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Margot Robbie.png" alt="Margot Robbie">
+                            <strong>Margot Robbie</strong><span>Barbie</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Ryan Gosling.png" alt="Ryan Gosling">
+                            <strong>Ryan Gosling</strong><span>Ken</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/America Ferrera.png" alt="America Ferrera">
+                            <strong>America Ferrera</strong><span>Gloria</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Kate McKinnon.png" alt="Kate McKinnon">
+                            <strong>Kate McKinnon</strong><span>Barbie</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Ariana Greenblatt.png" alt="Ariana Greenblatt">
+                            <strong>Ariana Greenblatt</strong><span>Sasha</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Issa Rae.png" alt="Issa Rae">
+                            <strong>Issa Rae</strong><span>Barbie Presidente</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Michael Cera.png" alt="Michael Cera">
+                            <strong>Michael Cera</strong><span>Allan</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Will Ferrell.png" alt="Will Ferrell">
+                            <strong>Will Ferrell</strong><span>CEO da Mattel</span>
+                        </div>
+                        <div class="cast-card">
+                            <img src="materiais/imgs/Alexandra Shipp.png" alt="Alexandra Shipp">
+                            <strong>Alexandra Shipp</strong><span>Barbie</span>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn" id="nextBtn" aria-label="Próximo">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section container">
+            <div class="section-header">
+                <h2 class="font-bold-36">Resenhas</h2>
+                <a href="#" class="btn-primary">Ver mais</a>
+            </div>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <p class="font-reg-24">Um filme super divertido, muito engraçado e reflexivo acerca da vida e da
+                        nossa sociedade...</p>
+                    <div class="review-footer">
+                        <p class="font-reg-24">por <strong>Hementon Renner</strong></p>
+                        <div class="review-meta">
+                            <span class="font-reg-24">21 de julho de 2023</span>
+                            <span class="font-reg-24">Nota: <strong>9/10</strong></span>
+                        </div>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <p class="font-bold-24">Título: Uma Celebração Encantadora e Empoderadora</p>
+                    <p class="font-reg-24">"Barbie" é uma adorável surpresa cinematográfica que honra o ícone
+                        cultural...</p>
+                    <div class="review-footer">
+                        <p class="font-reg-24">por <strong>Achilles</strong></p>
+                        <div class="review-meta">
+                            <span class="font-reg-24">26 de julho de 2023</span>
+                            <span class="font-reg-24">Nota: <strong>10/10</strong></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-logo">
+                <div class="logo-wrapper" style="position: relative; top: 0; left: 0;">
+                    <div class="logo-box"></div>
+                    <div class="logo-inner"></div>
+                    <span class="logo-text">PLAYCUBE</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#" class="font-reg-24">Sobre</a></li>
+                    <li><a href="#" class="font-reg-24">Contato</a></li>
+                    <li><a href="#" class="font-reg-24">Suporte</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="font-reg-24">Adicione um Filme</a></li>
+                    <li><a href="#" class="font-reg-24">Adicione uma Série</a></li>
+                    <li><a href="#" class="font-reg-24">Discussões</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="font-reg-24">Termos de Uso</a></li>
+                    <li><a href="#" class="font-reg-24">Política de Privacidade</a></li>
+                    <li><a href="#" class="font-reg-24">Diretrizes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
