@@ -137,48 +137,28 @@ body {
 
 .movie-specs {
     display: flex;
-    gap: 60px;
+    gap: 20px;
     margin-top: 40px;
     align-items: flex-start;
 }
 
 /* --- PÔSTER (400x600 FULL-BLEED) --- */
 .movie-poster {
-    /* Mantenha as propriedades de tamanho e estilo do contêiner */
+
     width: 400px;
     height: 600px;
-    border: none;
-    /* Garante que não há bordas no contêiner */
+
     border-radius: 10px;
-    /* Mantém os cantos arredondados */
     box-shadow: 0px 0px 10px #102C5733;
-    /* Mantém a sombra */
-    overflow: hidden;
-    /* Corta a imagem para respeitar os cantos arredondados */
-    padding: 0;
-    /* Garante que não há espaço interno */
-    margin: 0;
-    /* Garante que não há margem externa indesejada */
     display: block;
-    /* Ajuda no alinhamento */
 }
 
 .movie-poster img {
-    /* Esta é a alteração principal */
     width: 100%;
-    /* Ocupa 100% da largura do contêiner (400px) */
     height: 100%;
-    /* Ocupa 100% da altura do contêiner (600px) */
-
-    /* MUDANÇA AQUI: Altere de 'contain' para 'cover' */
     object-fit: cover;
-    /* O 'cover' força a imagem a se expandir para cobrir todo o espaço, 
-       eliminando as bordas vazias. */
+    border-radius: 10px;
 
-    display: block;
-    /* Remove espaços vazios na base da imagem */
-    border: none;
-    /* Garante que a tag img não tem borda própria */
 }
 
 .movie-details {
