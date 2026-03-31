@@ -1,13 +1,21 @@
-/* VARIÁVEIS CONFORME O TESTE */
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E ESPECIFICAÇÕES TÉCNICAS
+   ========================================================================== */
 :root {
-    --bg-color: #F2EAD3;
-    --card-bg: #DFD7BF;
-    --accent-taupe: #A4907C;
-    --primary-brown: #3F2305;
-    --light-gray: #F2F2F2;
-    --dark-text: #333333;
+    --bg-geral: #F2EAD3;
+    --bg-cards-resenhas: #DFD7BF;
+    --cor-detalhes-ano: #A4907C;
+    --marrom-principal: #3F2305;
+    --cinza-fundo: #F2F2F2;
+    --texto-escuro: #333333;
+
+    /* Font sizes base */
+    --font-spartan: 'League Spartan', sans-serif;
 }
 
+/* ==========================================================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +23,9 @@
 }
 
 body {
-    font-family: 'League Spartan', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--primary-brown);
+    font-family: var(--font-spartan);
+    background-color: var(--bg-geral);
+    color: var(--texto-escuro);
     line-height: 1.2;
 }
 
@@ -27,10 +35,12 @@ body {
     padding: 0 20px;
 }
 
-/* NAVBAR */
+/* ==========================================================================
+   3. HEADER (NAVBAR)
+   ========================================================================== */
 .navbar {
-    background-color: var(--primary-brown);
-    padding: 20px 0;
+    background-color: var(--marrom-principal);
+    padding: 15px 0;
 }
 
 .nav-content {
@@ -40,7 +50,8 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 38px;
+    display: block;
 }
 
 .nav-links {
@@ -50,16 +61,34 @@ body {
 }
 
 .nav-links a {
-    color: var(--bg-color);
+    color: var(--bg-geral);
     text-decoration: none;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
+    /* Bold */
 }
 
-/* HERO SECTION */
+/* Ícone Hambúrguer Mobile/Tablet */
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 35px;
+    height: 4px;
+    background-color: var(--bg-geral);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   4. SEÇÃO HERO (POSTER E INFO DO FILME)
+   ========================================================================== */
 .hero {
     display: flex;
-    gap: 60px;
+    gap: 70px;
     padding: 80px 0;
     align-items: flex-start;
 }
@@ -73,29 +102,30 @@ body {
 .movie-title {
     font-size: 48px;
     font-weight: 700;
+    color: var(--marrom-principal);
     margin-bottom: 30px;
     line-height: 55px;
 }
 
-.year {
-    color: var(--accent-taupe);
+.movie-title .year {
+    color: var(--cor-detalhes-ano);
     font-weight: 400;
-}
-
-.info-group {
-    margin-bottom: 25px;
+    /* Regular */
 }
 
 .label {
     font-size: 24px;
     font-weight: 700;
+    color: var(--marrom-principal);
     margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .value {
     font-size: 24px;
     font-weight: 400;
-    color: var(--dark-text);
+    color: var(--texto-escuro);
+    line-height: 27px;
 }
 
 .details-grid {
@@ -106,7 +136,9 @@ body {
     margin-top: 40px;
 }
 
-/* CAROUSEL & HEADERS */
+/* ==========================================================================
+   5. ELENCO (CARROSSEL)
+   ========================================================================== */
 .section-header {
     display: flex;
     align-items: center;
@@ -117,22 +149,19 @@ body {
 h2 {
     font-size: 36px;
     font-weight: 700;
+    color: var(--marrom-principal);
 }
 
 .btn-ver-mais {
-    background-color: var(--primary-brown);
-    color: var(--bg-color);
+    background-color: var(--marrom-principal);
+    color: var(--bg-geral);
     border: none;
     padding: 8px 25px;
     border-radius: 50px;
-    font-family: 'League Spartan';
+    font-family: inherit;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-}
-
-.cast-slider {
-    padding-bottom: 50px;
 }
 
 .swiper-slide {
@@ -148,17 +177,18 @@ h2 {
 }
 
 .swiper-slide h4 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
-    color: var(--dark-text);
 }
 
 .swiper-slide p {
     font-size: 18px;
-    color: var(--accent-taupe);
+    color: var(--cor-detalhes-ano);
 }
 
-/* RESENHAS */
+/* ==========================================================================
+   6. RESENHAS
+   ========================================================================== */
 .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -166,107 +196,166 @@ h2 {
 }
 
 .review-card {
-    background-color: var(--card-bg);
+    background-color: var(--bg-cards-resenhas);
     padding: 35px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .review-text {
     font-size: 19px;
-    color: var(--dark-text);
-    margin-bottom: 25px;
     line-height: 1.4;
+    margin-bottom: 25px;
 }
 
 .review-footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(63, 35, 5, 0.1);
     padding-top: 15px;
-}
-
-.review-footer p {
-    font-size: 20px;
 }
 
 .review-meta {
     display: flex;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 18px;
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--primary-brown);
-    color: var(--bg-color);
-    padding: 80px 0;
-    margin-top: 100px;
+/* ==========================================================================
+   7. RODAPÉ (SISTEMA DE GRID PARA 3 TELAS)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--marrom-principal);
+    padding: 60px 0;
+    margin-top: 80px;
 }
 
-.footer-content {
+.footer-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
-.footer-links {
-    display: flex;
-    gap: 80px;
+.footer-logo {
+    height: 45px;
 }
 
-.footer-links ul {
-    list-style: none;
+.footer-links-grid {
+    display: grid;
+    width: 100%;
 }
 
-.footer-links a {
-    color: var(--bg-color);
+.footer-links-grid a {
+    color: var(--bg-geral);
     text-decoration: none;
-    font-size: 20px;
-    line-height: 2.2;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 1024px) {
+/* --- RODAPÉ DESKTOP (3 COLUNAS) --- */
+@media (min-width: 1025px) {
+    .footer-wrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .footer-logo-section {
+        margin-right: 150px;
+        /* Vão entre a logo e os links */
+    }
+
+    .footer-links-grid {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+    }
+}
+
+/* --- RODAPÉ TABLET (2 COLUNAS) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
     .hero {
         flex-direction: column;
         align-items: center;
-        text-align: left;
     }
 
     .hero-poster img {
         width: 100%;
-        max-width: 400px;
-    }
-
-    .details-grid {
-        column-gap: 40px;
+        max-width: 500px;
+        margin-bottom: 40px;
     }
 
     .reviews-grid {
         grid-template-columns: 1fr;
     }
+
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo-section {
+        margin-bottom: 40px;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 colunas */
+        column-gap: 100px;
+    }
 }
 
-@media (max-width: 768px) {
+/* --- RODAPÉ MOBILE (1 COLUNA) --- */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-poster img {
+        width: 100%;
+    }
+
     .movie-title {
         font-size: 36px;
+        text-align: center;
     }
 
     .details-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        text-align: center;
+    .reviews-grid {
+        grid-template-columns: 1fr;
     }
 
-    .footer-links {
+    .footer-wrapper {
         flex-direction: column;
-        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .footer-logo-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        /* 1 coluna */
+    }
+
+    .footer-links-grid a {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 }

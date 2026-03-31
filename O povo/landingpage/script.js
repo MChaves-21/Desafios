@@ -1,26 +1,17 @@
-// Inicialização do Swiper para o Elenco
+// Inicializar Carrossel Swiper
 const swiper = new Swiper('.cast-slider', {
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: true,
-
-    // CARROSSEL AUTOMÁTICO
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
     },
-
-    // Ajustes para diferentes telas
     breakpoints: {
-        // Quando a tela for >= 640px
-        640: {
-            slidesPerView: 3,
-        },
-        // Quando a tela for >= 1024px
-        1024: {
-            slidesPerView: 6,
-        }
+        640: { slidesPerView: 3 },
+        1024: { slidesPerView: 6, spaceBetween: 40 }
     }
 });
 
-console.log("Interface Barbie carregada com sucesso!");
+// Mensagem de log para confirmar carregamento
+console.log("Interface PlayCube - Barbie (2023) carregada!");

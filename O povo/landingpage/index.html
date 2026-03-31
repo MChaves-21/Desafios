@@ -23,21 +23,31 @@
     <header class="navbar">
         <div class="container nav-content">
             <img src="imgs/logo.png" alt="PlayCube Logo" class="logo">
+
             <nav>
+                <!-- Menu Desktop -->
                 <ul class="nav-links">
                     <li><a href="#">Filmes</a></li>
                     <li><a href="#">Séries</a></li>
                 </ul>
+
+                <!-- Ícone Hambúrguer (Tablet e Mobile) -->
+                <div class="mobile-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- SEÇÃO HERO (IGUAL À IMAGEM) -->
+        <!-- HERO SECTION -->
         <section class="hero container">
             <div class="hero-poster">
                 <img src="imgs/capa.png" alt="Barbie Poster">
             </div>
+
             <div class="hero-info">
                 <h1 class="movie-title">Barbie <span class="year">(2023)</span></h1>
 
@@ -82,70 +92,70 @@
             </div>
         </section>
 
-        <!-- SEÇÃO ELENCO (CARROSSEL AUTOMÁTICO) -->
-        <section class="cast container">
-            <div class="section-header">
-                <h2>Elenco</h2>
-                <button class="btn-ver-mais">Ver mais</button>
-            </div>
+        <!-- SEÇÃO ELENCO -->
+        <section class="cast-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Elenco</h2>
+                    <button class="btn-ver-mais">Ver mais</button>
+                </div>
 
-            <div class="swiper cast-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="imgs/Margot Robbie.png" alt="Margot Robbie">
-                        <h4>Margot Robbie</h4>
-                        <p>Barbie</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Ryan Gosling.png" alt="Ryan Gosling">
-                        <h4>Ryan Gosling</h4>
-                        <p>Ken</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/America Ferrera.png" alt="America Ferrera">
-                        <h4>America Ferrera</h4>
-                        <p>Gloria</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Kate McKinnon.png" alt="Kate McKinnon">
-                        <h4>Kate McKinnon</h4>
-                        <p>Barbie</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Ariana Greenblatt.png" alt="Ariana Greenblatt">
-                        <h4>Ariana Greenblatt</h4>
-                        <p>Sasha</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Michael Cera.png" alt="Michael Cera">
-                        <h4>Michael Cera</h4>
-                        <p>Allan</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Issa Rae.png" alt="Issa Rae">
-                        <h4>Issa Rae</h4>
-                        <p>Barbie</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Will Ferrell.png" alt="Will Ferrell">
-                        <h4>Will Ferrell</h4>
-                        <p>CEO</p>
-                    </div>
-                    <div class="swiper-slide"><img src="imgs/Alexandra Shipp.png" alt="Alexandra Shipp">
-                        <h4>Alexandra Shipp</h4>
-                        <p>Barbie</p>
+                <div class="swiper cast-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="imgs/Margot Robbie.png" alt="Margot Robbie">
+                            <h4>Margot Robbie</h4>
+                            <p>Barbie</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/Ryan Gosling.png" alt="Ryan Gosling">
+                            <h4>Ryan Gosling</h4>
+                            <p>Ken</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/America Ferrera.png" alt="America Ferrera">
+                            <h4>America Ferrera</h4>
+                            <p>Gloria</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/Kate McKinnon.png" alt="Kate McKinnon">
+                            <h4>Kate McKinnon</h4>
+                            <p>Barbie</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/Ariana Greenblatt.png" alt="Ariana Greenblatt">
+                            <h4>Ariana Greenblatt</h4>
+                            <p>Sasha</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/Michael Cera.png" alt="Michael Cera">
+                            <h4>Michael Cera</h4>
+                            <p>Allan</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/Ariana Greenblatt.png" alt="Simone Biles">
+                            <h4>Ariana Greenblatt</h4>
+                            <p>Barbie</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/8.png" alt="Lea Thompson">
+                            <h4>Lea Thompson</h4>
+                            <p>Barbie</p>
+                        </div>
+                        <div class="swiper-slide"><img src="imgs/9.png" alt="Rhea Perlman">
+                            <h4>Rhea Perlman</h4>
+                            <p>Barbie</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO RESENHAS (TEXTO COMPLETO) -->
-        <section class="reviews container">
+        <!-- SEÇÃO RESENHAS -->
+        <section class="reviews-section container">
             <div class="section-header">
                 <h2>Resenhas</h2>
                 <button class="btn-ver-mais">Ver mais</button>
             </div>
+
             <div class="reviews-grid">
-                <!-- Card 1 -->
                 <div class="review-card">
                     <p class="review-text">Um filme super divertido, muito engraçado e reflexivo acerca da vida e da
                         nossa sociedade. Em sua grande maioria, apresenta críticas pontuais, bem escritas e muito
                         inteligentes, porém, há momentos em que essas críticas se tornam repetitivas, o que foi um
-                        pequeno e praticamente único problema para mim. De resto, é tudo perfeito, as atuações estão
-                        impecáveis, Ryan Gosling e Margot Robbie estão incríveis, a direção de Greta Gerwig também é
-                        ótima. É um filme que acert...</p>
+                        pequeno e praticamente único problema para mim...</p>
                     <div class="review-footer">
                         <p>por <strong>Hementon Renner</strong></p>
                         <div class="review-meta">
@@ -154,14 +164,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
+
                 <div class="review-card">
                     <p class="review-text">
                         <strong>Título: Uma Celebração Encantadora e Empoderadora - "Barbie" (2023)</strong><br><br>
                         "Barbie" é uma adorável surpresa cinematográfica que honra o icônico ícone cultural que é a
-                        boneca Barbie. Sob a brilhante interpretação de Margot Robbie, o filme é um verdadeiro deleite,
-                        repleto de charme, humor e vulnerabilidade, o que torna Robbie uma escolha perfeita para dar
-                        vida à amada boneca...
+                        boneca Barbie. Sob a brilhante interpretação de Margot Robbie, o filme é um verdadeiro
+                        deleite...
                     </p>
                     <div class="review-footer">
                         <p>por <strong>Achilles</strong></p>
@@ -176,30 +185,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <img src="imgs/logo.png" alt="PlayCube Logo" class="footer-logo">
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Suporte</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Adicione um Filme</a></li>
-                    <li><a href="#">Adicione uma Série</a></li>
-                    <li><a href="#">Discussões</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Diretrizes</a></li>
-                </ul>
+    <footer class="main-footer">
+        <div class="container footer-wrapper">
+            <!-- Logo -->
+            <div class="footer-logo-section">
+                <img src="imgs/logo.png" alt="PlayCube Logo" class="footer-logo">
+            </div>
+
+            <!-- Links (O CSS controla as colunas aqui) -->
+            <div class="footer-links-grid">
+                <a href="#">Sobre</a>
+                <a href="#">Discussões</a>
+                <a href="#">Contato</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Suporte</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Adicione um Filme</a>
+                <a href="#">Diretrizes</a>
+                <a href="#">Adicione uma Série</a>
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
