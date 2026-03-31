@@ -1,21 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuBtn = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
+// Inicialização do Swiper para o Elenco
+const swiper = new Swiper('.cast-slider', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
 
-    // Funcionalidade de abrir/fechar o menu em dispositivos móveis
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    // CARROSSEL AUTOMÁTICO
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 
-        // Acessibilidade: Indica se o menu está aberto ou fechado para leitores de tela
-        const isExpanded = navMenu.classList.contains('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Fecha o menu ao clicar fora dele
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.header-container')) {
-            navMenu.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    // Ajustes para diferentes telas
+    breakpoints: {
+        // Quando a tela for >= 640px
+        640: {
+            slidesPerView: 3,
+        },
+        // Quando a tela for >= 1024px
+        1024: {
+            slidesPerView: 6,
         }
-    });
+    }
 });
+
+console.log("Interface Barbie carregada com sucesso!");

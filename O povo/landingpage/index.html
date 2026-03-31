@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbie (2023) - Playcube</title>
+    <title>Barbie (2023) - PlayCube</title>
 
+    <!-- Google Fonts: League Spartan -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS (Carrossel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="header-container">
-            <div class="logo-wrapper">
-                <div class="logo-box"></div>
-                <div class="logo-inner"></div>
-                <span class="logo-text">PLAYCUBE</span>
-            </div>
-
-            <nav class="nav-menu">
-                <ul>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <img src="imgs/logo.png" alt="PlayCube Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
                     <li><a href="#">Filmes</a></li>
                     <li><a href="#">Séries</a></li>
                 </ul>
@@ -33,163 +33,174 @@
     </header>
 
     <main>
-        <section class="movie-specs container">
-            <div class="movie-poster">
-                <img src="materiais/imgs/capa.png" alt="Pôster do filme Barbie">
+        <!-- SEÇÃO HERO (IGUAL À IMAGEM) -->
+        <section class="hero container">
+            <div class="hero-poster">
+                <img src="imgs/capa.png" alt="Barbie Poster">
             </div>
+            <div class="hero-info">
+                <h1 class="movie-title">Barbie <span class="year">(2023)</span></h1>
 
-            <div class="movie-details">
-                <h1 class="movie-title">Barbie <span class="movie-year">(2023)</span></h1>
-
-                <div class="spec-item">
-                    <strong class="font-bold-24">Gênero:</strong>
-                    <p class="font-reg-24">Comédia, Aventura, Fantasia</p>
+                <div class="info-group">
+                    <h3 class="label">Gênero:</h3>
+                    <p class="value">Comédia, Aventura, Fantasia</p>
                 </div>
 
-                <div class="spec-item">
-                    <strong class="font-bold-24">Sinopse:</strong>
-                    <p class="font-reg-24">No mundo mágico das Barbies, "Barbieland", uma das bonecas começa a perceber
-                        que não se encaixa como as outras. Depois de ser expulsa, ela parte para uma aventura no "mundo
+                <div class="info-group">
+                    <h3 class="label">Sinopse:</h3>
+                    <p class="value">No mundo mágico das Barbies, "Barbieland", uma das bonecas começa a perceber que
+                        não se encaixa como as outras. Depois de ser expulsa, ela parte para uma aventura no "mundo
                         real", onde descobre que a beleza está no interior de cada um.</p>
                 </div>
 
-                <div class="specs-grid">
-                    <div class="spec-item"><strong class="font-bold-24">Dirigido por:</strong>
-                        <p class="font-reg-24">Greta Gerwig</p>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3 class="label">Dirigido por:</h3>
+                        <p class="value">Greta Gerwig</p>
                     </div>
-                    <div class="spec-item"><strong class="font-bold-24">Escrito por:</strong>
-                        <p class="font-reg-24">Greta Gerwig, Noah Baumbach</p>
+                    <div class="detail-item">
+                        <h3 class="label">Escrito por:</h3>
+                        <p class="value">Greta Gerwig, Noah Baumbach</p>
                     </div>
-                    <div class="spec-item"><strong class="font-bold-24">Situação:</strong>
-                        <p class="font-reg-24">Lançada</p>
+                    <div class="detail-item">
+                        <h3 class="label">Situação:</h3>
+                        <p class="value">Lançado</p>
                     </div>
-                    <div class="spec-item"><strong class="font-bold-24">Idioma original:</strong>
-                        <p class="font-reg-24">Inglês</p>
+                    <div class="detail-item">
+                        <h3 class="label">Idioma original:</h3>
+                        <p class="value">Inglês</p>
                     </div>
-                    <div class="spec-item"><strong class="font-bold-24">Orçamento:</strong>
-                        <p class="font-reg-24">$145,000,000.00</p>
+                    <div class="detail-item">
+                        <h3 class="label">Orçamento:</h3>
+                        <p class="value">$145,000,000.00</p>
                     </div>
-                    <div class="spec-item"><strong class="font-bold-24">Receita:</strong>
-                        <p class="font-reg-24">$1,280,313,193.00</p>
+                    <div class="detail-item">
+                        <h3 class="label">Receita:</h3>
+                        <p class="value">$1,280,313,193.00</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cast-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="font-bold-36">Elenco</h2>
-                    <a href="#" class="btn-primary">Ver mais</a>
-                </div>
-
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">&lt;</button>
-                    <div class="cast-scroll" id="castScroll">
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Margot Robbie.png" alt="Margot Robbie">
-                            <strong>Margot Robbie</strong><span>Barbie</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Ryan Gosling.png" alt="Ryan Gosling">
-                            <strong>Ryan Gosling</strong><span>Ken</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/America Ferrera.png" alt="America Ferrera">
-                            <strong>America Ferrera</strong><span>Gloria</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Kate McKinnon.png" alt="Kate McKinnon">
-                            <strong>Kate McKinnon</strong><span>Barbie</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Ariana Greenblatt.png" alt="Ariana Greenblatt">
-                            <strong>Ariana Greenblatt</strong><span>Sasha</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Issa Rae.png" alt="Issa Rae">
-                            <strong>Issa Rae</strong><span>Barbie Presidente</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Michael Cera.png" alt="Michael Cera">
-                            <strong>Michael Cera</strong><span>Allan</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Will Ferrell.png" alt="Will Ferrell">
-                            <strong>Will Ferrell</strong><span>CEO da Mattel</span>
-                        </div>
-                        <div class="cast-card">
-                            <img src="materiais/imgs/Alexandra Shipp.png" alt="Alexandra Shipp">
-                            <strong>Alexandra Shipp</strong><span>Barbie</span>
-                        </div>
-                    </div>
-                    <button class="carousel-btn next-btn" id="nextBtn" aria-label="Próximo">&gt;</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="reviews-section container">
+        <!-- SEÇÃO ELENCO (CARROSSEL AUTOMÁTICO) -->
+        <section class="cast container">
             <div class="section-header">
-                <h2 class="font-bold-36">Resenhas</h2>
-                <a href="#" class="btn-primary">Ver mais</a>
+                <h2>Elenco</h2>
+                <button class="btn-ver-mais">Ver mais</button>
+            </div>
+
+            <div class="swiper cast-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/Margot Robbie.png" alt="Margot Robbie">
+                        <h4>Margot Robbie</h4>
+                        <p>Barbie</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Ryan Gosling.png" alt="Ryan Gosling">
+                        <h4>Ryan Gosling</h4>
+                        <p>Ken</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/America Ferrera.png" alt="America Ferrera">
+                        <h4>America Ferrera</h4>
+                        <p>Gloria</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Kate McKinnon.png" alt="Kate McKinnon">
+                        <h4>Kate McKinnon</h4>
+                        <p>Barbie</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Ariana Greenblatt.png" alt="Ariana Greenblatt">
+                        <h4>Ariana Greenblatt</h4>
+                        <p>Sasha</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Michael Cera.png" alt="Michael Cera">
+                        <h4>Michael Cera</h4>
+                        <p>Allan</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Issa Rae.png" alt="Issa Rae">
+                        <h4>Issa Rae</h4>
+                        <p>Barbie</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Will Ferrell.png" alt="Will Ferrell">
+                        <h4>Will Ferrell</h4>
+                        <p>CEO</p>
+                    </div>
+                    <div class="swiper-slide"><img src="imgs/Alexandra Shipp.png" alt="Alexandra Shipp">
+                        <h4>Alexandra Shipp</h4>
+                        <p>Barbie</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO RESENHAS (TEXTO COMPLETO) -->
+        <section class="reviews container">
+            <div class="section-header">
+                <h2>Resenhas</h2>
+                <button class="btn-ver-mais">Ver mais</button>
             </div>
             <div class="reviews-grid">
-                <article class="review-card">
-                    <p class="font-reg-24">Um filme super divertido, muito engraçado e reflexivo acerca da vida e da
-                        nossa sociedade...</p>
+                <!-- Card 1 -->
+                <div class="review-card">
+                    <p class="review-text">Um filme super divertido, muito engraçado e reflexivo acerca da vida e da
+                        nossa sociedade. Em sua grande maioria, apresenta críticas pontuais, bem escritas e muito
+                        inteligentes, porém, há momentos em que essas críticas se tornam repetitivas, o que foi um
+                        pequeno e praticamente único problema para mim. De resto, é tudo perfeito, as atuações estão
+                        impecáveis, Ryan Gosling e Margot Robbie estão incríveis, a direção de Greta Gerwig também é
+                        ótima. É um filme que acert...</p>
                     <div class="review-footer">
-                        <p class="font-reg-24">por <strong>Hementon Renner</strong></p>
+                        <p>por <strong>Hementon Renner</strong></p>
                         <div class="review-meta">
-                            <span class="font-reg-24">21 de julho de 2023</span>
-                            <span class="font-reg-24">Nota: <strong>9/10</strong></span>
+                            <span>21 de julho de 2023</span>
+                            <span>Nota: <strong>9</strong>/10</span>
                         </div>
                     </div>
-                </article>
-                <article class="review-card">
-                    <p class="font-bold-24">Título: Uma Celebração Encantadora e Empoderadora</p>
-                    <p class="font-reg-24">"Barbie" é uma adorável surpresa cinematográfica que honra o ícone
-                        cultural...</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="review-card">
+                    <p class="review-text">
+                        <strong>Título: Uma Celebração Encantadora e Empoderadora - "Barbie" (2023)</strong><br><br>
+                        "Barbie" é uma adorável surpresa cinematográfica que honra o icônico ícone cultural que é a
+                        boneca Barbie. Sob a brilhante interpretação de Margot Robbie, o filme é um verdadeiro deleite,
+                        repleto de charme, humor e vulnerabilidade, o que torna Robbie uma escolha perfeita para dar
+                        vida à amada boneca...
+                    </p>
                     <div class="review-footer">
-                        <p class="font-reg-24">por <strong>Achilles</strong></p>
+                        <p>por <strong>Achilles</strong></p>
                         <div class="review-meta">
-                            <span class="font-reg-24">26 de julho de 2023</span>
-                            <span class="font-reg-24">Nota: <strong>10/10</strong></span>
+                            <span>26 de julho de 2023</span>
+                            <span>Nota: <strong>10</strong>/10</span>
                         </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container container">
-            <div class="footer-logo">
-                <div class="logo-wrapper" style="position: relative; top: 0; left: 0;">
-                    <div class="logo-box"></div>
-                    <div class="logo-inner"></div>
-                    <span class="logo-text">PLAYCUBE</span>
-                </div>
-            </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <img src="imgs/logo.png" alt="PlayCube Logo" class="footer-logo">
             <div class="footer-links">
                 <ul>
-                    <li><a href="#" class="font-reg-24">Sobre</a></li>
-                    <li><a href="#" class="font-reg-24">Contato</a></li>
-                    <li><a href="#" class="font-reg-24">Suporte</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Suporte</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#" class="font-reg-24">Adicione um Filme</a></li>
-                    <li><a href="#" class="font-reg-24">Adicione uma Série</a></li>
-                    <li><a href="#" class="font-reg-24">Discussões</a></li>
+                    <li><a href="#">Adicione um Filme</a></li>
+                    <li><a href="#">Adicione uma Série</a></li>
+                    <li><a href="#">Discussões</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#" class="font-reg-24">Termos de Uso</a></li>
-                    <li><a href="#" class="font-reg-24">Política de Privacidade</a></li>
-                    <li><a href="#" class="font-reg-24">Diretrizes</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Diretrizes</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
