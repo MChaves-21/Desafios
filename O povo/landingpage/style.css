@@ -1,21 +1,13 @@
-/* ==========================================================================
-   1. VARIÁVEIS DE CORES E ESPECIFICAÇÕES TÉCNICAS
-   ========================================================================== */
 :root {
     --bg-geral: #F2EAD3;
-    --bg-cards-resenhas: #DFD7BF;
-    --cor-detalhes-ano: #A4907C;
-    --marrom-principal: #3F2305;
-    --texto-escuro: #333333;
+    --bg-cards: #DFD7BF;
+    --detalhes: #A4907C;
+    --marrom-main: #3F2305;
+    --texto-dark: #333333;
     --font-spartan: 'League Spartan', sans-serif;
-
-    /* Sombra exata do Adobe XD (#102C5733) */
     --sombra-capa: 0px 0px 10px rgba(16, 44, 87, 0.2);
 }
 
-/* ==========================================================================
-   2. RESET E CONFIGURAÇÕES GERAIS
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +17,7 @@
 body {
     font-family: var(--font-spartan);
     background-color: var(--bg-geral);
-    color: var(--texto-escuro);
+    color: var(--texto-dark);
     line-height: 1.2;
 }
 
@@ -35,11 +27,9 @@ body {
     padding: 0 20px;
 }
 
-/* ==========================================================================
-   3. HEADER (NAVBAR)
-   ========================================================================== */
+/* NAVBAR */
 .navbar {
-    background-color: var(--marrom-principal);
+    background-color: var(--marrom-main);
     padding: 15px 0;
 }
 
@@ -51,7 +41,6 @@ body {
 
 .logo {
     height: 38px;
-    display: block;
 }
 
 .nav-links {
@@ -81,9 +70,7 @@ body {
     border-radius: 2px;
 }
 
-/* ==========================================================================
-   4. SEÇÃO HERO (CORREÇÃO DEFINITIVA DA CAPA 400x600)
-   ========================================================================== */
+/* HERO (DESKTOP) */
 .hero {
     display: flex;
     gap: 20px;
@@ -98,8 +85,6 @@ body {
     border-radius: 10px;
     box-shadow: var(--sombra-capa);
     overflow: hidden;
-    /* Importante: corta o excesso da imagem */
-    background-color: transparent;
     position: relative;
 }
 
@@ -107,37 +92,34 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    /* O scale(1.01) elimina qualquer fresta ou borda branca do arquivo original */
     transform: scale(1.01);
-    border: none;
+    display: block;
 }
 
 .movie-title {
     font-size: 48px;
     font-weight: 700;
-    color: var(--marrom-principal);
+    color: var(--marrom-main);
     margin-bottom: 30px;
     line-height: 55px;
 }
 
 .movie-title .year {
-    color: var(--cor-detalhes-ano);
+    color: var(--detalhes);
     font-weight: 400;
 }
 
 .label {
     font-size: 24px;
     font-weight: 700;
-    color: var(--marrom-principal);
+    color: var(--marrom-main);
     margin-bottom: 5px;
     margin-top: 15px;
 }
 
 .value {
     font-size: 24px;
-    font-weight: 400;
-    color: var(--texto-escuro);
+    color: var(--texto-dark);
     line-height: 27px;
 }
 
@@ -149,9 +131,7 @@ body {
     margin-top: 40px;
 }
 
-/* ==========================================================================
-   5. ELENCO E CARROSSEL
-   ========================================================================== */
+/* SEÇÕES */
 .section-header {
     display: flex;
     align-items: center;
@@ -162,11 +142,11 @@ body {
 h2 {
     font-size: 36px;
     font-weight: 700;
-    color: var(--marrom-principal);
+    color: var(--marrom-main);
 }
 
 .btn-ver-mais {
-    background-color: var(--marrom-principal);
+    background-color: var(--marrom-main);
     color: var(--bg-geral);
     border: none;
     padding: 8px 25px;
@@ -175,6 +155,11 @@ h2 {
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
+}
+
+/* CARROSSEL */
+.cast-slider {
+    padding-bottom: 40px;
 }
 
 .swiper-slide {
@@ -190,19 +175,7 @@ h2 {
     display: inline-block;
 }
 
-.swiper-slide h4 {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.swiper-slide p {
-    font-size: 18px;
-    color: var(--cor-detalhes-ano);
-}
-
-/* ==========================================================================
-   6. RESENHAS
-   ========================================================================== */
+/* RESENHAS */
 .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -210,15 +183,23 @@ h2 {
 }
 
 .review-card {
-    background-color: var(--bg-cards-resenhas);
+    background-color: var(--bg-cards);
     padding: 35px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-text {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 25px;
 }
 
 .review-footer {
     border-top: 1px solid rgba(63, 35, 5, 0.1);
     padding-top: 15px;
-    margin-top: 20px;
 }
 
 .review-meta {
@@ -228,54 +209,49 @@ h2 {
     font-size: 18px;
 }
 
-/* ==========================================================================
-   7. RODAPÉ (COLUNAS DINÂMICAS)
-   ========================================================================== */
+/* FOOTER (DESKTOP) */
 .main-footer {
-    background-color: var(--marrom-principal);
-    padding: 60px 0;
+    background-color: var(--marrom-main);
+    padding: 80px 0;
     margin-top: 80px;
 }
 
 .footer-wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-logo {
     height: 45px;
 }
 
-.footer-links-grid {
-    display: grid;
-    width: 100%;
+.footer-columns {
+    display: flex;
+    gap: 100px;
 }
 
-.footer-links-grid a {
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
     color: var(--bg-geral);
     text-decoration: none;
     font-size: 24px;
-    margin-bottom: 15px;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
-/* --- DESKTOP (3 COLUNAS) --- */
-@media (min-width: 1025px) {
-    .footer-wrapper {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .footer-logo-section {
-        margin-right: 150px;
-    }
-
-    .footer-links-grid {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 50px;
-    }
+.footer-col a:hover {
+    opacity: 0.7;
 }
 
-/* --- TABLET (2 COLUNAS) --- */
+/* RESPONSIVIDADE (TABLET) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .nav-links {
         display: none;
@@ -288,12 +264,16 @@ h2 {
     .hero {
         flex-direction: column;
         align-items: center;
+        padding: 40px;
     }
 
     .hero-poster {
-        width: 400px;
-        height: 600px;
         margin-bottom: 40px;
+    }
+
+    .hero-info {
+        width: 100%;
+        padding: 0 20px;
     }
 
     .movie-title {
@@ -307,19 +287,22 @@ h2 {
     .footer-wrapper {
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 40px;
     }
 
     .footer-logo-section {
         margin-bottom: 40px;
     }
 
-    .footer-links-grid {
+    .footer-columns {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 100px;
+        gap: 40px 100px;
+        width: 100%;
     }
 }
 
-/* --- MOBILE (1 COLUNA) --- */
+/* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 767px) {
     .nav-links {
         display: none;
@@ -332,6 +315,7 @@ h2 {
     .hero {
         flex-direction: column;
         align-items: center;
+        padding: 40px 15px;
     }
 
     .hero-poster {
@@ -362,13 +346,15 @@ h2 {
     .footer-wrapper {
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 20px;
     }
 
     .footer-logo-section {
         margin-bottom: 30px;
     }
 
-    .footer-links-grid {
-        grid-template-columns: 1fr;
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
     }
 }
